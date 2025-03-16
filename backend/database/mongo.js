@@ -14,7 +14,7 @@ export const Mongo = {
         return 'Connected to Mongo DB'
 
         } catch (error) {
-           return {text: 'Error durin Mongo Connection', error} 
+           return {text: 'Error during Mongo Connection', error} 
         }
         
     }

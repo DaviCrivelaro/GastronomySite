@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { Mongo } from '../database/mongo';
+import { Mongo } from '../database/mongo.js';
 import {config} from 'dotenv'
 
 config();
@@ -11,7 +11,7 @@ async function main (){
     const port = 3000;
 
     const app = express()
-    const mongoConnection=await Mongo.connect({mongoConnectionString: process.env.MONGO_CS, mongoDbName: process.env,MONGO_DB_NAME,})
+    const mongoConnection=await Mongo.connect({mongoConnectionString: process.env.MONGO_CS, mongoDbName: process.env.MONGO_DB_NAME})
     console.log(mongoConnection)
 
 
